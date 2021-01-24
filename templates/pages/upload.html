@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto Condensed' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Source Code Pro' rel='stylesheet'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+
+<body style="background: #2E2E2E;">
+
+    <nav style="background-color:#404040; justify-content: center;">
+        <div class="container-fluid">
+            <ul style="margin:0;">
+                <li style="text-align: center; padding: 5px; vertical-align: middle;">
+                    <a href="/" style="padding: 10px 10px; display:inline-block;">
+                        <div style="display: flex; justify-content: center;">
+                            <div class="blur-text">BLUR</div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div style="margin-top: 100px;">
+        
+        <div style="display: flex; flex-direction: column; justify-content: center; text-align: left; width: 50%; margin: auto;">
+            <div class="upload-text">Upload Video</div>
+            <div class="drag-text">Drag and drop file here</div>
+            </div>
+
+            <form action="/upload" method="POST" enctype="multipart/form-data">
+            
+                <div class="upload-box">
+            
+                    <div style="width: 100%; display: flex; justify-content: center;">
+
+                        <label for="file-upload" class="choose-file">
+                            Choose File
+                        </label>
+                        <input id="file-upload" type="file" multiple="false" accept="video/*" name="video" style="display: none;"/>
+            
+
+                    </div>
+                </div>
+
+                <div style="display: flex; justify-content: space-between; width:50%; margin: auto;">
+                    <button class="cancel-btn" type="button" onclick="window.location.href='/'">Cancel</button>
+                    <button class="upload-btn" type="submit" onclick="window.location.href='/upload'">Upload</button>
+                </div>
+
+            </form>
+
+    </form>
+    </div>
+
+</body>
+
+</html>
