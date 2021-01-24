@@ -75,9 +75,9 @@ class DeployCommand(Command):
 setup_requires = []
 
 install_requires = [
-    'numpy==1.16.4',
+    'numpy~=1.19.2',
     'tensorflow-gpu>=1.13.1',
-    'tensorflow>=1.12.0',  # change this is tensorflow-gpu if using GPU machine.
+    # 'tensorflow>=1.12.0',  # change this is tensorflow-gpu if using GPU machine.
     'keras>=2.2.5',
     'pillow>=7.0.0',
     'bleach>=2.1.0'

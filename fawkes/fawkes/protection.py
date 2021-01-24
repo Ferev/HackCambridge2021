@@ -105,7 +105,7 @@ class Fawkes(object):
         with graph.as_default():
             faces = Faces(image_paths, loaded_images, self.aligner, verbose=1, no_align=no_align)
             original_images = faces.cropped_faces
-
+            print('HELLO')
             if len(original_images) == 0:
                 print("No face detected. ")
                 return 2
@@ -139,7 +139,7 @@ class Fawkes(object):
                                                           verbose=1 if debug else 0,
                                                           maximize=False,
                                                           keep_final=False,
-                                                          image_shape=(224, 224, 3))
+                                                          image_shape=(500, 500, 3))
 
                 protected_images = generate_cloak_images(self.protector, original_images,
                                                          target_emb=target_embedding)
